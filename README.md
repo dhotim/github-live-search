@@ -14,7 +14,7 @@ This App is not limited to a particular operating system as long as the system s
 ## Getting started
 
 Clone the repository:
-`git clone git@github.com:kanzucode/angie-client.git`
+`git clone git@github.com:dhotim/github-live-search.git`
 
 Install the dependencies:
 `npm install`
