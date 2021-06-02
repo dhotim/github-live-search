@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, Divider } from "semantic-ui-react";
-import { auth, remoteRoutes } from "../data/constants";
+import { remoteRoutes } from "../data/constants";
 import NotFound from "./NotFound";
 
 export default function Repos({ data }) {
@@ -8,7 +8,7 @@ export default function Repos({ data }) {
 
   useEffect(() => {
     fetch(`${remoteRoutes.getUser}${data.login}/repos`, {
-      headers: auth,
+      headers: { Authorization: process.env.REACT_APP_TOKEN },
     })
       .then((res) => res.json())
       .then((data) => {

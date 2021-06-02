@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, Image, Divider } from "semantic-ui-react";
-import { auth, remoteRoutes } from "../data/constants";
+import { remoteRoutes } from "../data/constants";
 import NotFound from "./NotFound";
 
 export default function Follow({ data }) {
@@ -8,7 +8,7 @@ export default function Follow({ data }) {
 
   useEffect(() => {
     fetch(`${remoteRoutes.getUser}${data.login}/followers`, {
-      headers: auth,
+      headers: { Authorization: process.env.REACT_APP_TOKEN },
     })
       .then((res) => res.json())
       .then((rData) => {
