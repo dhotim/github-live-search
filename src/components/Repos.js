@@ -8,7 +8,7 @@ export default function Repos({ data }) {
 
   useEffect(() => {
     fetch(`${remoteRoutes.getUser}${data.login}/repos`, {
-      headers: { Authorization: atob(process.env.REACT_APP_TOKEN) },
+      headers: { Authorization: `Token ${atob(process.env.REACT_APP_TOKEN)}` },
     })
       .then((res) => res.json())
       .then((data) => {

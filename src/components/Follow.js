@@ -8,7 +8,7 @@ export default function Follow({ data }) {
 
   useEffect(() => {
     fetch(`${remoteRoutes.getUser}${data.login}/followers`, {
-      headers: { Authorization: atob(process.env.REACT_APP_TOKEN) },
+      headers: { Authorization: `Token ${atob(process.env.REACT_APP_TOKEN)}` },
     })
       .then((res) => res.json())
       .then((rData) => {

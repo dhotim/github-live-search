@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     fetch(`${remoteRoutes.getUser}${username}`, {
-      headers: { Authorization: atob(process.env.REACT_APP_TOKEN) },
+      headers: { Authorization: `Token ${atob(process.env.REACT_APP_TOKEN)}` },
     })
       .then((res) => res.json())
       .then((data) => {
