@@ -1,6 +1,28 @@
-# Getting Started with Create React App
+# About Github Live Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Github Live search is a simple tool for searching Github users, their repositories and their followers.
+The results are rendered in real time on every key stroke.
+With this tool, you are able to quickly search a valid user by Github login.
+You can also use this to quickly check whether a Github username you intend to use is already taken.
+
+# The Technology and Limitations
+
+This repo holds the github live search project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The semantic-ui-react library is used for the user interface and react-router for basic routing.
+This App is not limited to a particular operating system as long as the system supports the use of the node package manager (npm).
+
+## Getting started
+
+Clone the repository:
+`git clone git@github.com:kanzucode/angie-client.git`
+
+Install the dependencies:
+`npm install`
+
+**PS:** If you don't have `npm` installed, check out this guide https://www.npmjs.com/get-npm
+
+Finally, start the party:
+`npm start`
 
 ## Available Scripts
 
