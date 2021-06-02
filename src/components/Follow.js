@@ -8,7 +8,7 @@ export default function Follow({ data }) {
 
   useEffect(() => {
     fetch(`${remoteRoutes.getUser}${data.login}/followers`, {
-      headers: { Authorization: process.env.REACT_APP_TOKEN },
+      headers: { Authorization: atob(process.env.REACT_APP_TOKEN) },
     })
       .then((res) => res.json())
       .then((rData) => {
@@ -58,5 +58,4 @@ export default function Follow({ data }) {
       </div>
     </>
   );
-
 }
