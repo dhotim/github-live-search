@@ -4,6 +4,11 @@ export const localRoutes = {
   follow: "/follow",
 };
 
+export const endPoints = {
+  followers: "/followers",
+  repos: "/repos",
+};
+
 export const remoteRoutes = {
-  getUser: "https://api.github.com/users/",
+  getUser: "https://api.github.com/users",
 };
