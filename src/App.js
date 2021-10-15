@@ -19,7 +19,6 @@ function App() {
 
     return response;
   }
-  console.log("The USer", username.length);
 
   useEffect(() => {
     username.length > 0 &&
@@ -33,11 +32,10 @@ function App() {
         .then((data) => {
           setData(data);
         })
-        .catch((e) => {
-          console.log(`The user ${username} was not found`);
-        });
+        .catch((e) => {});
   }, [username]);
 
+  console.log("App Data", data);
   return (
     <Router>
       <div>

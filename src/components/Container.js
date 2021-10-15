@@ -4,10 +4,11 @@ import { remoteRoutes } from "../data/constants";
 import NotFound from "./NotFound";
 
 export default function Container({ data, endpoint, children }) {
-  const [childProp, setChildProp] = useState();
+  const [childProp, setChildProp] = useState([]);
+  console.log("Container", data);
 
   useEffect(() => {
-    fetch(`${remoteRoutes.getUser}${data.login}${endpoint}`, {
+    fetch(`${remoteRoutes.getUser}/${data.login}/${endpoint}`, {
       headers: { Authorization: `Token ${atob(process.env.REACT_APP_TOKEN)}` },
     })
       .then((res) => res.json())
@@ -16,7 +17,7 @@ export default function Container({ data, endpoint, children }) {
       });
   }, [data.login, endpoint]);
 
-  return data.message ? (
+  return !!data.message ? (
     <>
       <div className="cards">
         <Card>

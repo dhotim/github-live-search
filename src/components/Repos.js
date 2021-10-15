@@ -2,11 +2,10 @@ import React from "react";
 import { Card } from "semantic-ui-react";
 
 export default function Repos({ data }) {
+  console.log("My data", data);
 
   return (
-
     <>
-    
       <div className="repo">
         <Card fluid>
           {data &&

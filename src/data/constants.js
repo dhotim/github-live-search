@@ -5,8 +5,8 @@ export const localRoutes = {
 };
 
 export const endPoints = {
-  followers: "/followers",
-  repos: "/repos",
+  followers: "followers",
+  repos: "repos",
 };
 
 export const remoteRoutes = {
