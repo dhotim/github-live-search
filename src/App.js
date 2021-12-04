@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "./components/Navbar";
 import Cards from "./components/Cards";
 import Repos from "./components/Repos";
 import { remoteRoutes, endPoints } from "./data/constants";
@@ -8,7 +7,7 @@ import NotFound from "./components/NotFound";
 import Search from "./components/Search";
 import Container from "./components/Container";
 
-function App() {
+export function App() {
   const [username, setUsername] = useState("");
   const [data, setData] = useState({});
 
@@ -38,9 +37,6 @@ function App() {
   console.log("App Data", data);
   return (
     <Router>
-      <div>
-        <Navbar />
-      </div>
       <div>
         <Search handleSearch={(item) => setUsername(item)} />
       </div>
@@ -73,5 +69,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
