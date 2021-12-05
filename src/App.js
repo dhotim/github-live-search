@@ -3,9 +3,9 @@ import Cards from "./components/Cards";
 import Repos from "./components/Repos";
 import { remoteRoutes, endPoints } from "./data/constants";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import NotFound from "./components/NotFound";
 import Search from "./components/Search";
 import Container from "./components/Container";
+import { NotFound } from "./components/EmptyState/NotFound";
 
 export function App() {
   const [username, setUsername] = useState("");

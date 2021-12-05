@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "semantic-ui-react";
 import { remoteRoutes } from "../data/constants";
-import NotFound from "./NotFound";
+import { NotFound } from "./EmptyState/NotFound";
 
 export default function Container({ data, endpoint, children }) {
   const [childProp, setChildProp] = useState([]);
