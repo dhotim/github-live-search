@@ -1,8 +1,8 @@
 import React from "react";
 import { localRoutes } from "../data/constants";
 import { Card, Image, Icon } from "semantic-ui-react";
-import NotFound from "./NotFound";
 import { Link } from "react-router-dom";
+import { NotFound } from "./EmptyState/NotFound";
 
 export default function Cards({ data }) {
   const joinDate = new Date(data.created_at).toLocaleDateString();
@@ -10,7 +10,7 @@ export default function Cards({ data }) {
   return (
     <>
       {data.message ? (
-        <NotFound msg={data.message} />
+        <NotFound />
       ) : (
         <div className="cards">
           <Card>

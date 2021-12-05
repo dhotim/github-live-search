@@ -13,7 +13,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-const Body = styled.div``;
+const Body = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  width: 70ch;
+`;
+
 const Header = styled.div`
   background-color: #48bfe3;
   display: flex;
